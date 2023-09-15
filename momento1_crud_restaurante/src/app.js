@@ -6,6 +6,7 @@ const expressMyConnection = require('express-myconnection');
 
 const app = express();
 
+
 // Configurar Express para servir archivos estáticos desde la carpeta "public"
 app.use(express.static(path.join(__dirname, 'public')));
 

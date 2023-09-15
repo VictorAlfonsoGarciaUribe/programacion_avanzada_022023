@@ -15,6 +15,14 @@ CREATE TABLE pedido(
     estado VARCHAR(20)
 );
 
+CREATE TABLE users(
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user VARCHAR(50) NOT NULL,
+    name VARCHAR (50) NOT NULL,
+    rol VARCHAR(20) NOT NULL,
+    password VARCHAR(50)
+);
+
 
 
 --Para mostrar todas las tablas
