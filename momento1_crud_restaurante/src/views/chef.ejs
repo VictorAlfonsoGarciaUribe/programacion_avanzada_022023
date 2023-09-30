@@ -21,6 +21,7 @@
                                 <th>Platillo</th>
                                 <th>Cantidad</th>
                                 <th>Cliente</th>
+                                <th>Observaciones</th>
                                 <th>Acción</th>
                             </tr>
                         </thead>
@@ -30,7 +31,7 @@
                                 <% for (var i=0; i < dataPorPreparar.length; i++) { %>
                                     <tr>
                                         <td>
-                                            <%= (i+1)%>
+                                            <%= dataPorPreparar[i].id %>
                                         </td>
                                         <td>
                                             <%= dataPorPreparar[i].platillo %>
@@ -40,6 +41,9 @@
                                         </td>
                                         <td>
                                             <%= dataPorPreparar[i].cliente %>
+                                        </td>
+                                        <td>
+                                            <%= dataPorPreparar[i].observaciones %>
                                         </td>
                                         <td>
                                             <%=console.log(dataPorPreparar[i].id) %>
@@ -79,7 +83,7 @@
                                 <% for (var i=0; i < dataPreparando.length; i++) { %>
                                     <tr>
                                         <td>
-                                            <%= (i+1)%>
+                                            <%= dataPreparando[i].id %>
                                         </td>
                                         <td>
                                             <%= dataPreparando[i].platillo %>

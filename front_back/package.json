@@ -1,0 +1,17 @@
+{
+  "name": "consumir_appi",
+  "version": "1.0.0",
+  "main": "conexion.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./backend/conexion.js"
+  },
+  "author": "Victor G",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
