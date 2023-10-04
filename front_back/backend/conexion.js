@@ -60,3 +60,17 @@ app.get("/productos",function(req,res){
         res.json(result)
     })
 })
+
+//ruta para recibir los datos 
+app.post("/productos", (req, res)=>{
+    const {nombre, presentación, precio, imagen} = req.body;
+   // console.log( producto );
+    db.query("INSERT INTO productos (nombre, presentacion, precio, imagen) values (?, ?, ?, ?)", [nombre, presentación, precio, imagen], (error, result)=>{
+        if(error){
+            console.log("error al crear el producto : ", error)
+            res.status(500).json({error: "Error al crear producto"})
+            return;
+        }
+        res.status(201).json({mensaje: "Producto creado con exito "})
+    })
+})
